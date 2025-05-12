@@ -97,6 +97,13 @@ public class Blackjack {
                     String message = "TEST";
 
                     //if statements to update message is WIN, LOSE, PUSH(DRAW or TIE) based on score
+                    if((playerSum > dealerSum || dealerSum > 21) && playerSum <= 21){
+                        message = "WIN";
+                    }else if (playerSum < dealerSum || playerSum > 21){
+                        message = "LOSE";
+                    }else if (playerSum == dealerSum){
+                        message = "PUSH";
+                    }
 
                     g.setFont(new Font("Arial",Font.PLAIN,30));
                     g.setColor(Color.white);
