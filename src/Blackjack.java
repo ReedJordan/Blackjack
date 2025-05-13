@@ -97,12 +97,13 @@ public class Blackjack {
                     String message = "TEST";
 
                     //if statements to update message is WIN, LOSE, PUSH(DRAW or TIE) based on score
+                    //My improvement: changing "WIN", "LOSE", and "PUSH" to other things
                     if((playerSum > dealerSum || dealerSum > 21) && playerSum <= 21){
-                        message = "WIN";
+                        message = "YIPPIE";
                     }else if (playerSum < dealerSum || playerSum > 21){
-                        message = "LOSE";
+                        message = "WOMP WOMP";
                     }else if (playerSum == dealerSum){
-                        message = "PUSH";
+                        message = "Tie (you lose)";
                     }
 
                     g.setFont(new Font("Arial",Font.PLAIN,30));
